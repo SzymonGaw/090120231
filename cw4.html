@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>JS: Zdarzenia</title>
+<style>
+.done{
+background: green;
+color: white;
+}
+</style>
+<script>
+function klikme() {
+console.log('Klik!');
+}
+document.addEventListener("DOMContentLoaded", function(event) {
+const element = document.querySelector('.par');
+// 2 zdarzenia dla jednego kliknięcia
+element.addEventListener('click', klikme);
+element.addEventListener('click', function() {
+this.style.color = 'red';
+});
+});
+</script>
+</head>
+<body>
+<p class='par'>jeden</p>
+</body>
+</html>
